@@ -1,0 +1,14 @@
+//! SigmaOS-module-blacklist — thin CLI entry point.
+//!
+//! The library lives in `src/lib.rs`; this binary only wires argv/stdout.
+
+use sigmaos_module_blacklist_lib::Component;
+
+fn main() {
+    let mut component = Component::new();
+    if let Err(e) = component.init().and_then(|_| component.run()) {
+        eprintln!("SigmaOS-module-blacklist: {e}");
+        std::process::exit(1);
+    }
+    println!("SigmaOS-module-blacklist: ok");
+}

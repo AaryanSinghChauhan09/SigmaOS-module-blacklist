@@ -3,7 +3,7 @@ name = "SigmaOS-module-blacklist"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "module-blacklist component"
+description = "module blacklist component"
 upstream = []
 
 [contract]
